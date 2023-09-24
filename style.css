@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: rgba(0, 0, 0, 0.988);
+}
+
+/* Edición de la barra de navegación*/
+
+.navegador {
+    background-color: rgba(128, 128, 128, 0.167);
+    display: grid;
+    grid-template-columns: 10% 35% 40% 15%;
+}
+
+.navegador img {
+    width: 10rem;
+}
+
+.logo {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.barra-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.barra-nav li {
+    list-style: none;
+    font-size: 1.6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.ajustes {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-start: 4;
+    align-items: center;
+}
+
+.ajustes img {
+    width: 4rem;
+}
+
+/* Edición del contenedor de películas*/
+
+.main-container section {
+    padding: 1rem 0;
+}
+
+.main-container img {
+    width: 28rem;
+    height: 16rem;
+    background-size: cover;
+    border: .1rem solid white;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.main-container span {
+    display: block;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem 0 1rem 5.2rem;
+    color: white;
+}
+
+.main-container div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+
+/* Usando las media querys*/
+
+@media (max-width:1460) {
+    .main-container img {
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .main-container {
+        grid-template-columns: 5% 30% 30% 30% 5%;
+    }
+    .s-1 {
+        grid-column-start: 2;
+    }
+    .main-container img {
+        width: 36rem;
+        height: 20rem;
+        margin: 1rem 0;
+    }
+    .main-container div {
+        padding: 0;
+        padding: 1rem 0;
+    }
+}
