@@ -1,0 +1,199 @@
+:root {
+  --background-color: #141414;
+  --color-text: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#profiles {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--background-color);
+}
+
+.container-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-profile h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: unset;
+  color: #fff;
+}
+
+.grid-profiles {
+  display: grid;
+  justify-items: center;
+}
+
+.profiles-choice {
+  display: grid;
+  gap: 5px;
+}
+
+.profile {
+  font-size: 13px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile:hover img {
+  border-color: #fff;
+}
+
+.profile:hover {
+  color: #fff;
+}
+
+.profile img {
+  min-width: 84px;
+  height: 84px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.profile span {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper-add-profile {
+  padding: 5px;
+  border-radius: 2px;
+  border: 2px solid transparent;
+}
+
+.wrapper-add-profile svg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  background: var(--color-text);
+}
+
+.add-profile {
+  display: flex;
+  justify-items: center;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-profile:hover .wrapper-add-profile {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.add-profile:hover svg {
+  fill: #fff;
+}
+
+.add-profile:hover span {
+  color: #fff;
+}
+
+.add-profile span {
+  font-size: 13px;
+  color: var(--color-text);
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profile:hover .add-profile span {
+  color: #fff;
+}
+
+.wrapper-profile #btn-profiles {
+  background: transparent;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.wrapper-profile #btn-profiles:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+@media screen and (width >= 268px) {
+
+  .profiles-choice {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width >= 425px) {
+
+  .profiles-choice {
+    gap: 10px;
+  }
+
+  .profiles-choice {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (width >= 768px) {
+
+  .wrapper-profile {
+    scale: 1.3;
+  }
+
+  .grid-profiles {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .profiles-choice {
+    gap: 20px;
+  }
+
+  .wrapper-add-profile {
+    scale: 1.2;
+  }
+
+  .add-profile span {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (width >= 900px) {
+
+  .wrapper-profile {
+    scale: 1.5;
+  }
+}
+
+@media screen and (width >= 1250px) {
+
+  .wrapper-profile {
+    scale: 2;
+  }
+}
