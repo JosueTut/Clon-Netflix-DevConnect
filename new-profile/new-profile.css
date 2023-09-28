@@ -1,0 +1,118 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background: #141414;
+}
+
+/*Contenedor central*/
+.div-centrado {
+    display: grid;
+    grid-template-areas:
+    "titulo titulo titulo titulo"
+    "subtitulo subtitulo subtitulo subtitulo"
+    "linea linea linea linea"
+    "logo-usuario input-usuario label-checkbox checkbox"
+    "linea2 linea2 linea2 linea2"
+    "continuar cancelar . .";
+    grid-template-columns: 25% 55% 15% 1%;
+    grid-template-rows: 15% 10% auto auto auto 15%;
+    margin: 40px auto;
+    gap: 20px;
+    width: 700px;
+    height: 450px;
+}
+
+.linea1 {
+    width: 800px;
+    height: 1px;
+    background: grey;
+    grid-area: linea;
+}
+
+.linea2 {
+    width: 800px;
+    height: 1px;
+    background: grey;
+    grid-area: linea2;
+}
+
+.logo-netflix {
+    margin-left: 30px;
+}
+
+/*Contenido principal*/
+.div-centrado__titulo {
+    color: white;
+    font-size: 40px;
+    grid-area: titulo;
+}
+
+.div-centrado__subtitulo {
+    color: grey;
+    grid-area: subtitulo;
+}
+
+.logo-usuario {
+    grid-area: logo-usuario;
+    border-radius: 7px;
+}
+
+.input-usuario {
+    grid-area: input-usuario;
+    width: 350px;
+    height: 35px;
+    outline: none;
+    background: #666;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.input-usuario::placeholder {
+    color: #fff;
+}
+
+/*Contenido secundario*/
+.checkbox {
+    width: 20px;
+    height: 20px;
+    grid-area: checkbox;
+}
+
+.label-checkbox {
+    color: #fff;
+    grid-area: label-checkbox;
+}
+/*Fin del contenido*/
+
+
+/* Continuar & Cancelar con sus hovers*/
+.continuar {
+    background: #fff;
+    width: 150px;
+    height: 35px;
+    border: none;
+    color: black;
+    grid-area: continuar;
+}
+
+.continuar:hover {
+    background: red;
+    color: #fff;
+}
+
+.cancelar {
+    background: transparent;
+    width: 150px;
+    height: 35px;
+    border: 1px solid grey;
+    color: grey;
+    grid-area: cancelar;
+}
+
+.cancelar:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
